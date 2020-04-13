@@ -10,8 +10,8 @@ Date:07-04-2020
 #include<fstream>
 using namespace std;
 class student{
-        int sno;
-        char Name[50];
+        int key;
+        string Name;
 public:
 	//friend fumction
         friend ostream& operator<<(ostream &,student &);
@@ -22,27 +22,26 @@ public:
         }
         bool operator==(const student &s)const
         {
-                return sno==s.sno;
+                return key==s.key;
         }
-        int getsno()
+        int getkey()
         {
-                return sno;
+                return key;
         }
 };
 ostream& operator<<(ostream &out,student &s)
 {
-        out<<"serial no: "<<s.sno<<endl;
-        out<<"configaration:<<s.Name<<endl;
+        out<<"key: "<<s.Key<<endl;
+        out<<s.Name<<endl;
 
         return out;
 }
 istream& operator>>(istream &in,student &s)
 {
-        cout<<"Enter Roll no:";
-        in>>s.sno;
-        cout<<"Enter Name";
-        getchar();
- 	 in.get(s.Name,30,'\n');
+        cout<<"Enter key value:";
+        in>>s.key;
+        cout<<"Enter configaration";
+        cin>>s.Name
         return in;
 }
 /*function name:addconfig
@@ -61,10 +60,9 @@ void addconfig(set<student> &std)
                 std.insert(s);
                 for(it=std.begin();it!=std.end();it++)
                         outfile.write((char*)&(*it),sizeof(s));
-                cout<<"Do you want to append student data(y/n)?";
+                cout<<"Do you want to append configaration(y/n)?";
                 getchar();
                 cin>>option;
-        outfile.close();
         }
 }
 /*function name:deleteconfig
@@ -80,7 +78,7 @@ void deleteconfig(set<student> &std)
         for(it=std.begin();it!=std.end();it++)
         {
                 s=*it;
-                if(s.getsno()==no)
+                if(s.getkey()==no)
                         std.erase(it);
    }
         for(it=std.begin();it!=std.end();it++)
@@ -113,12 +111,12 @@ void searchupdateconfig(set<student> &std)
         student s;
         set<student>:: iterator it;
         ofstream outfile("notes.ini",ios::trunc|ios::out|ios::binary);
-        cout<<"Enter the rollno of student to update details in database";
+        cout<<"Enter the key to update details of configaration";
         cin>>no;
         for(it=std.begin();it!=std.end();it++)
         {
                 s=*it;
-                if(s.getsno()==no)
+                if(s.getkey()==no)
                 {
                         std.erase(it);
                         break;
