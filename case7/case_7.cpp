@@ -18,7 +18,7 @@ public:
         friend istream& operator>>(istream &,student &);
         bool operator<(const student &s)const
         {
-                return sno<s.sno;
+                return key<s.key;
         }
         bool operator==(const student &s)const
         {
