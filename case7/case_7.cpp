@@ -32,15 +32,15 @@ public:
 ostream& operator<<(ostream &out,student &s)
 {
         out<<"serial no: "<<s.sno<<endl;
-        out<<"configaration:<<s.Name<<endl;
+        out<<s.Name<<endl;
 
         return out;
 }
 istream& operator>>(istream &in,student &s)
 {
-        cout<<"Enter Roll no:";
+        cout<<"Enter keyvalue";
         in>>s.sno;
-        cout<<"Enter Name";
+        cout<<"Enter configaration";
         getchar();
  	 in.get(s.Name,30,'\n');
         return in;
@@ -61,7 +61,7 @@ void addconfig(set<student> &std)
                 std.insert(s);
                 for(it=std.begin();it!=std.end();it++)
                         outfile.write((char*)&(*it),sizeof(s));
-                cout<<"Do you want to append student data(y/n)?";
+                cout<<"Do you want to append configaration(y/n)?";
                 getchar();
                 cin>>option;
         outfile.close();
@@ -76,7 +76,9 @@ void deleteconfig(set<student> &std)
         int no;
         student s;
         set<student>:: iterator it;
-        ofstream outfile("notes.ini",ios::trunc|ios::out|ios::binary);        cout<<"Enter the rollno for deleting the student from database";        cin>>no;
+        ofstream outfile("notes.ini",ios::trunc|ios::out|ios::binary);       
+	cout<<"Enter the key for deleting the configaration from file";       
+	cin>>no;
         for(it=std.begin();it!=std.end();it++)
         {
                 s=*it;
@@ -136,7 +138,7 @@ int main(int argc,char **argv)
 {
 	if(argc==2)
 	{
-	cout<<"program.exe"<<endl;
+	cout<<"programname.exe"<<endl;
 	cout<<"this program is used add ,delete,update data to file"<<endl;
 	}
 	else
