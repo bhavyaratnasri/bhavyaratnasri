@@ -5,7 +5,6 @@ Author:M.Bhavya ratna sri
 */
 #include<iostream>
 #include<stdlib.h>
-#include<typeinfo>
 #include<bits/stdc++.h>
 using namespace std;
 /*function name:check
@@ -25,41 +24,47 @@ return true;	//if the condition satisfifies it return '1'.
 //main usig command line arguments.
 int main(int argc,char *argv[])
 {
-int iG,iJ;		//declaring integer variables
-float fH;		//declaring float variable
-if(argc==2)
+int IntG,IntJ;		//declaring integer variables
+float FloatH;		//declaring float variable
+if(argc==2 && (strcmp(argv[1]=='-h')==1))
 {
-cout<<"usage: ./program.exe arg1 arg2 arg3 arg4(arguments can be int,float,char,sting)"<<endl;
+cout<<"usage: case1.exe arg1 arg2 arg3 arg4(arguments can be int,float,char,sting)"<<endl;
 cout<<"used for finding type and size of given argument"<<endl; 
 }
-else
+else if (argc>1)
 {
 cout<<"type"<<"\t"<<"value"<<"\t"<<"sizeof"<<endl;
-for(iG=1;iG<argc;iG++)
+for(IntG=1;IntG<argc;IntG++)
 {
-	iJ=atoi(argv[iG]);		//atoi convert ascii to int
-	fH=atof(argv[iG]);		//atof convert ascii to float
-   if(iJ==0)
+	IntJ=atoi(argv[IntG]);		//atoi convert ascii to int
+	FloatH=atof(argv[IntG]);		//atof convert ascii to float
+   if(IntJ==0)
 	{
-		if(check(argv[iG]))	//if condition satisfies means it will print char
+		if(check(argv[IntG]))	//if condition satisfies means it will print char
 		{
 		cout<<"char";
-		cout<<"\t"<<argv[iG]<< "\t"<<strlen(argv[iG])<<endl;
+		cout<<"\t"<<argv[IntG]<< "\t"<<strlen(argv[IntG])<<endl;
 		}
 		else		//it will print string
 		{
 		cout<<"string";
-		cout<<"\t"<<argv[iG]<< "\t"<<sizeof(argv[iG])<<endl;
+		cout<<"\t"<<argv[IntG]<< "\t"<<sizeof(argv[IntG])<<endl;
 		}
 	}
 	else
 	{
-		if(iJ==fH)	//if condition  that stisfied means it will print int 
-		cout<<"int"<< "\t"<<iJ<<"\t"<<sizeof(iJ)<<endl;
+		if(IntJ==IntH)	//if condition  that stisfied means it will print int 
+		cout<<"int"<< "\t"<<IntJ<<"\t"<<sizeof(IntJ)<<endl;
 		else		//else it will print float
-		cout<<"float"<< "\t"<<fH<<"\t"<<sizeof(fH)<<endl;
+		cout<<"float"<< "\t"<<FloatH<<"\t"<<sizeof(FloatH)<<endl;
 	}
 }
 	return 0;
+	
 }
+	else
+	{
+		cout<<"no arguments are given"<<endl<<"-h for usage";
+	}
 }
+
