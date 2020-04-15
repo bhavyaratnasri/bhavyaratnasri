@@ -50,7 +50,7 @@ int INTG,INTJ;		//declaring integer variables
 float FLOATH;		//declaring float variable
 if(argc==2&&(strcmp(argv[1],"-h")==0))
 {
-cout<<"usage: ./program.exe arg1 arg2 arg3 arg4(arguments can be int,float,char,sting)"<<endl;
+cout<<"usage: case1.exe arg1 arg2 arg3 arg4(arguments can be int,float,char,sting)"<<endl;
 cout<<"used for finding type and size of given argument"<<endl; 
 }
 else if(argc>1)
