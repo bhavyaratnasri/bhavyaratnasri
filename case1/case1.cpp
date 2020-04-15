@@ -15,8 +15,8 @@ return type:bool
 bool 
 check(string sStr)
 {
-int iK;
-for(iK=0;sStr.length()==1;iK++)
+int INTK;
+for(INTK=0;sStr.length()==1;iNTK++)
 {
 return true;	//if the condition satisfifies it return '1'.
 }
