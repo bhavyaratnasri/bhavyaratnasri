@@ -13,27 +13,34 @@ input parameter:int
 output parameter:int
 */
 int 
-square(int in)
+square(int inum)
 {
 int iRes;
-iRes=(in*(in+1)*(2*in+1))/6;	//formula for given expression
+iRes=(inum*(inum+1)*(2*inum+1))/6;	//formula for given expression
 return iRes;			//return sum;
 }
 
 int main(int argc,char**argv)
 {
-int ik,iz;
 //this is for dispalying the usage of program
-if(argc==2)
+if(argc==2 && (strcmp(argv[1],"-h")==0))
 {
-cout<<"usage:./a.out"<<endl;
+cout<<"usage:case2.exe"<<endl;
 cout<<"used for displaying sum of squares of given number"<<endl;
 }
-else
+else 
 {
+  int IntValue,Intresult;
+  if(IntValue>0)
+  {
 cout<<"Input:";
-cin>>ik;
-iz=square(ik);		//calling square function
-cout<<"output:"<<iz<<endl;	//for displaying output
-}
+cin>>IntValue;
+Intresult=square(IntValue);		//calling square function
+cout<<"output:"<<iz<<endl;//for displaying output
+  }
+  else
+  {
+    cout<<"enter only positive numbers"<<endl;
+  }
+}   
 }
