@@ -5,7 +5,6 @@ Author:M.Bhavya ratna sri
 */
 #include<iostream>
 #include<stdlib.h>
-#include<typeinfo>
 #include<bits/stdc++.h>
 using namespace std;
 /*function name:check
@@ -16,8 +15,8 @@ return type:bool
 bool 
 check(string sStr)
 {
-int iK;
-for(iK=0;sStr.length()==1;iK++)
+int IntK;
+for(IntK=0;sStr.length()==1;IntK++)
 {
 return true;
 }
@@ -29,10 +28,10 @@ input parameter:string
 bool check_number(string str)
 {
 int flag=0;
-for(int i=0;i<str.length();i++)
+for(int pos=0;pos<str.length();pos++)
 {
 //condition for checking real no
-if(str[i]=='.')		
+if(str[pos]=='.')		
 {
 flag=1;
 break;
@@ -47,37 +46,41 @@ cout<<"int"<< "\t"<<str<<"\t"<<sizeof(str)<<endl;
 //main usig command line arguments.
 int main(int argc,char *argv[])
 {
-int iG,iJ;		//declaring integer variables
-float fH;		//declaring float variable
-if(argc==2)
+int INTG,INTJ;		//declaring integer variables
+float FLOATH;		//declaring float variable
+if(argc==2&&(strcmp(argv[1],"-h")==0))
 {
 cout<<"usage: ./program.exe arg1 arg2 arg3 arg4(arguments can be int,float,char,sting)"<<endl;
 cout<<"used for finding type and size of given argument"<<endl; 
 }
-else
+else if(argc>1)
 {
 cout<<"type"<<"\t"<<"value"<<"\t"<<"sizeof"<<endl;
-for(iG=1;iG<argc;iG++)
+for(INTG=1;INTG<argc;INTG++)
 {
-	iJ=atoi(argv[iG]);	//atoi convert ascii to string
-   if(iJ==0)
+	INTJ=atoi(argv[INTG]);	//atoi convert ascii to string
+   if(INTJ==0)
 	{
-		if(check(argv[iG]))	//if condition satisfies means it will print char
+		if(check(argv[INTG]))	//if condition satisfies means it will print char
 		{
 		cout<<"char";
-		cout<<"\t"<<argv[iG]<< "\t"<<strlen(argv[iG])<<endl;
+		cout<<"\t"<<argv[INTG]<< "\t"<<strlen(argv[INTG])<<endl;
 		}
 		else		//it will print string
 		{
 		cout<<"string";
-		cout<<"\t"<<argv[iG]<< "\t"<<sizeof(argv[iG])<<endl;
+		cout<<"\t"<<argv[INTG]<< "\t"<<sizeof(argv[INTG])<<endl;
 		}
 	}
 	else
 	
-		check_number(argv[iG]);	//if condition  that stisfied means it will print int 
+		check_number(argv[INTG]);	//if condition  that stisfied means it will print int 
 }
 }
 	return 0;
+	else
+	{
+		cout<<"no argument"<<endl<<"-h for usage:"<<endl;
+	}
 }
 
