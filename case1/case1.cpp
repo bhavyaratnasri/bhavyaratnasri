@@ -62,9 +62,5 @@ for(IntG=1;IntG<argc;IntG++)
 	return 0;
 	
 }
-	else
-	{
-		cout<<"no arguments are given"<<endl<<"-h for usage";
-	}
 }
 
