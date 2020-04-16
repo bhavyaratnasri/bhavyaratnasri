@@ -268,7 +268,7 @@ int main(int argc,char* argv[])
         char Opt;
         while(1)
         {
-            cout<<"Select your option:"<<endl<<" 1.add"<<endl<<" 2.delete"<<endl<<" 3.display"<<endl<<" 4.search"<<endl<<" 6.exit"<<endl;
+            cout<<"Select your option:"<<endl<<" 1.add"<<endl<<" 2.delete"<<endl<<" 3.display"<<endl<<" 4.search"<<endl<<" 5.exit"<<endl;
             cin>>Opt;
             switch(Opt)
             {
