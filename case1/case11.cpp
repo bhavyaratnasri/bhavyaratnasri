@@ -22,10 +22,10 @@ return true;
 }
 }
 /*function name:check_number
-return type :bool
+return type :void
 input parameter:string
 */
-bool check_number(string str)
+void check_number(string str)
 {
 int flag=0;
 for(int pos=0;pos<str.length();pos++)
