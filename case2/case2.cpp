@@ -32,7 +32,7 @@ else
 {
   int IntValue,Intresult;
   cout<<"output:"<<icout<<"Input:";
-cin>>IntValue;
+  cin>>IntValue;
   if(IntValue>0)
   {
 Intresult=square(IntValue);		//calling square function
