@@ -78,9 +78,5 @@ for(INTG=1;INTG<argc;INTG++)
 }
 }
 	return 0;
-	else
-	{
-		cout<<"no argument"<<endl<<"-h for usage:"<<endl;
-	}
 }
 
