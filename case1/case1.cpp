@@ -31,7 +31,7 @@ if(argc==2 && (strcmp(argv[1]=='-h')==1))
 cout<<"usage: case1.exe arg1 arg2 arg3 arg4(arguments can be int,float,char,sting)"<<endl;
 cout<<"used for finding type and size of given argument"<<endl; 
 }
-else if (argc>1)
+else 
 {
 cout<<"type"<<"\t"<<"value"<<"\t"<<"sizeof"<<endl;
 for(IntG=1;IntG<argc;IntG++)
