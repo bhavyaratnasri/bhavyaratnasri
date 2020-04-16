@@ -59,8 +59,7 @@ for(IntG=1;IntG<argc;IntG++)
 		cout<<"float"<< "\t"<<FloatH<<"\t"<<sizeof(FloatH)<<endl;
 	}
 }
-	return 0;
-	
 }
+	return 0;
 }
 
