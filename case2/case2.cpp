@@ -31,12 +31,12 @@ cout<<"used for displaying sum of squares of given number"<<endl;
 else 
 {
   int IntValue,Intresult;
+  cout<<"output:"<<icout<<"Input:";
+cin>>IntValue;
   if(IntValue>0)
   {
-cout<<"Input:";
-cin>>IntValue;
 Intresult=square(IntValue);		//calling square function
-cout<<"output:"<<iz<<endl;//for displaying output
+cout<<Intresultz<<endl;//for displaying output
   }
   else
   {
