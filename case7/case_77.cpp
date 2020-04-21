@@ -273,17 +273,17 @@ int main(int argc,char* argv[])
                 case '3':
                         displayconfig();
                         break;
-			case '4':
-				   searchupdateconfig(std);
-					break;
-		     case '5':
-			         searchconfig(std);
-			         break;
+	        case '4':
+		         searchupdateconfig(std);
+			  break;
+		 case '5':
+			  searchconfig(std);
+			    break;
 		     case '6':
 			         exit(0);
 			         break;
                 default:
-                        return 0;
+                        cout<<"wrong choice";
             }
         }
     }
