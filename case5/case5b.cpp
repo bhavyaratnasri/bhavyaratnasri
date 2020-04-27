@@ -18,7 +18,7 @@ public:
 	cout<<"In teacher desctrucyor:"<<endl;
 	}
 };
-class student:protected teacher
+class student:public teacher
 {
 	public:
 	student()
@@ -42,7 +42,8 @@ int main(int argc,char  **argv)
     else
 	{
 	//declaration of objects
-	teacher *p=new teacher();
 	student *q=new student();
+	    teacherr *p=q;
+	    delete p;
 	}
 }
