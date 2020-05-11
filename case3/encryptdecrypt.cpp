@@ -77,6 +77,10 @@ void encryptfile::reverseword(char* inputfile,char *key)
 	//close the ouput file
 	fout.close();
 }
+/*functioname:decrypt
+	input parameters:char *,char*
+	output parameter:void
+*/
 void encryptfile::decrypt(char* filename, char* key)
 {
 	//	 filestream variables fin,fout
@@ -125,7 +129,10 @@ void encryptfile::decrypt(char* filename, char* key)
 	//closing outfile
 	fout.close();		
 }
-
+/*functioname:passkey
+	input parameters:char *,char*
+	output parameter:void
+*/
 void encryptfile::passkey(char* filename, char* key)
 {
 	//	 filestream variables fin,fout
