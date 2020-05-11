@@ -18,9 +18,6 @@ void encryptfile::encryptdata(char* inputfile,char *key)
 	fstream fin, fout;
 	//open the fin file	
 	fin.open(inputfile, ios::in);
-	//open the out file	
-	fout.open("encryptedfile.txt", ios::out);
-
 	if (!fin)
 	{
 		cout << "error:opening output file" << endl;
@@ -28,12 +25,10 @@ void encryptfile::encryptdata(char* inputfile,char *key)
 	}
 	cout << "enter alphanumeric" << endl;
 	cin >> specialchar;
-	//calling reverse function in c++
+	//calling reverseword function 
 	reverseword(inputfile,key);
 	//close the input file			
 	fin.close();
-	//close the ouput file
-	fout.close();
 }
 /*functioname:reverseword
 	input parameters:char *,char*
