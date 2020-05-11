@@ -10,5 +10,6 @@ public:
 	void reverseword(char*,char *);
 	//function declaration for decrypt 
 	void decrypt(char*, char*);
+	//function declaration for passkey
 	void passkey(char*, char*);
 };
