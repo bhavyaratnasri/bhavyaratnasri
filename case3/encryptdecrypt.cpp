@@ -159,7 +159,6 @@ encryptfile::~encryptfile()
 }
 int main(int argc, char** argv)
 {
-	encryptfile obj;
 	//displaing usage
 	if (argc == 2 && strcmp(argv[1], "-h") == 0)
 	{
@@ -170,15 +169,15 @@ int main(int argc, char** argv)
 	else if (argc > 2)
 	{
 		//creating object for the class
-	//	encryptfile obj;
+			encryptfile encryptfileobj;
 		 if ((strcmp(argv[1], "-e") == 0) && (strcmp(argv[2], "-f") == 0) && (strcmp(argv[4], "-k") == 0))
-		obj.encryptdata(argv[3], argv[5]);
+		        encryptfileobj.encryptdata(argv[3], argv[5]);
 		else if ((strcmp(argv[1], "-e") == 0) && (strcmp(argv[2], "-k") == 0) && (strcmp(argv[4], "-f") == 0))
-		obj.encryptdata(argv[5], argv[3]); 
+		          encryptfileobj.encryptdata(argv[5], argv[3]); 
 		else if ((strcmp(argv[1], "-d") == 0) && (strcmp(argv[2], "-f") == 0) && (strcmp(argv[4], "-k") == 0))
-			obj.passkey(argv[3], argv[5]);
+		       	   encryptfileobj.passkey(argv[3], argv[5]);
 		else if ((strcmp(argv[1], "-d") == 0) && (strcmp(argv[2], "-k") == 0) && (strcmp(argv[4], "-f")==0))
-			 obj.passkey(argv[5], argv[3]);
+			    encryptfileobj.passkey(argv[5], argv[3]);
 		else
 			cout << "wrong input" << endl;
 	}
