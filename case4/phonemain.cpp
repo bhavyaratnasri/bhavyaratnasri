@@ -13,10 +13,10 @@ int main(int argc, char** argv)
         cin >> number;
         int result=0;
         
-       for(int i=0;i<number.length();i++)
+       for(int val=0;val<number.length();val++)
         {
             //checking string contains number or not
-            if ((number[i]>=50 && number[i]<=57))
+            if ((number[val]>=50 && number[val]<=57))
             {
                 continue;
             }
